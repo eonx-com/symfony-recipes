@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "eonx-com/easy-error-handler": {
+            "manifest": {
+                "bundles": {
+                    "EonX\\EasyErrorHandler\\Bridge\\Symfony\\EasyErrorHandlerSymfonyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/easy_error_handler.yaml": {
+                    "contents": [
+                        "easy_error_handler:",
+                        "    bugsnag_enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/easy_error_handler.yaml": {
+                    "contents": [
+                        "easy_error_handler:",
+                        "    verbose: '%env(bool:APP_DEBUG)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/local/easy_error_handler.yaml": {
+                    "contents": [
+                        "easy_error_handler:",
+                        "    bugsnag_enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/easy_error_handler.yaml": {
+                    "contents": [
+                        "easy_error_handler:",
+                        "    bugsnag_enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9fd4c329dde5d8c3e3ef3f34aeacae83117c20f8"
+        }
+    }
+}

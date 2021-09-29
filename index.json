@@ -201,6 +201,9 @@
         "eonx-com/easy-bugsnag": [
             "3.4"
         ],
+        "eonx-com/easy-error-handler": [
+            "3.4"
+        ],
         "eonx-com/easy-http-client": [
             "3.4"
         ],
