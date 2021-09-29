@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "eonx-com/easy-webhook": {
+            "manifest": {
+                "bundles": {
+                    "EonX\\EasyWebhook\\Bridge\\Symfony\\EasyWebhookSymfonyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/easy_webhook.yaml": {
+                    "contents": [
+                        "easy_webhook:",
+                        "    signature:",
+                        "        enabled: true",
+                        "        secret: '%env(APP_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4e8b31ccbdb2cc642eee1ac8e07092e7624d17d7"
+        }
+    }
+}

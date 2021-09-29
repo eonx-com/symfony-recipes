@@ -209,6 +209,9 @@
         ],
         "eonx-com/easy-logging": [
             "3.4"
+        ],
+        "eonx-com/easy-webhook": [
+            "3.4"
         ]
     },
     "versions": {
