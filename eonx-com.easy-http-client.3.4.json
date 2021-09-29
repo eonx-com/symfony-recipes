@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "eonx-com/easy-http-client": {
+            "manifest": {
+                "bundles": {
+                    "EonX\\EasyHttpClient\\Bridge\\Symfony\\EasyHttpClientSymfonyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/easy_http_client.yaml": {
+                    "contents": [
+                        "easy_http_client:",
+                        "    decorate_default_client: true",
+                        "    decorate_easy_webhook_client: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ee6ff9cb85e016d1a5ab7d2aa73deb5d11999666"
+        }
+    }
+}

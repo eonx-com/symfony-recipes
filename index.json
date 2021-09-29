@@ -198,6 +198,9 @@
         "zulipnotifier": "symfony/zulip-notifier"
     },
     "recipes": {
+        "eonx-com/easy-http-client": [
+            "3.4"
+        ],
         "eonx-com/easy-logging": [
             "3.4"
         ]
