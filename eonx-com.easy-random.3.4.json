@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "eonx-com/easy-random": {
+            "manifest": {
+                "bundles": {
+                    "EonX\\EasyRandom\\Bridge\\Symfony\\EasyRandomSymfonyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/easy_random.yaml": {
+                    "contents": [
+                        "easy_random:",
+                        "    uuid_v4_generator: EonX\\EasyRandom\\UuidV4\\SymfonyUidUuidV4Generator",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7f445afa5cdc95c9ed36c046637208c264b62500"
+        }
+    }
+}
