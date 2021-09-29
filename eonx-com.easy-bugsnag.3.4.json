@@ -17,6 +17,10 @@
                         "easy_bugsnag:",
                         "    api_key: '%env(for_build:BUGSNAG_API_KEY)%'",
                         "",
+                        "    app_name:",
+                        "        enabled: true",
+                        "        env_var: 'AWS_ECS_TASK_NAME'",
+                        "",
                         "    aws_ecs_fargate:",
                         "        enabled: true",
                         "        meta_url: '%env(for_build:ECS_CONTAINER_METADATA_URI_V4)%/task'",
@@ -70,7 +74,7 @@
                     "executable": false
                 }
             },
-            "ref": "2d6a84cf348d8661df861229910a3f8cff567ccd"
+            "ref": "5646c0901ff00a3ad476bd422c532d32f846a7b3"
         }
     }
 }
