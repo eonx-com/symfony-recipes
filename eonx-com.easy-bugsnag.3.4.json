@@ -23,7 +23,6 @@
                         "",
                         "    aws_ecs_fargate:",
                         "        enabled: true",
-                        "        meta_url: '%env(for_build:ECS_CONTAINER_METADATA_URI_V4)%/task'",
                         "",
                         "    session_tracking:",
                         "        enabled: true",
@@ -74,7 +73,7 @@
                     "executable": false
                 }
             },
-            "ref": "5646c0901ff00a3ad476bd422c532d32f846a7b3"
+            "ref": "6c41157d083d236913418bb830c37ae35f617b18"
         }
     }
 }
