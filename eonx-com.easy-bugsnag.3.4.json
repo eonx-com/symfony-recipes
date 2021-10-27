@@ -12,31 +12,7 @@
                 }
             },
             "files": {
-                "config/packages/easy_bugsnag.yaml": {
-                    "contents": [
-                        "easy_bugsnag:",
-                        "    api_key: '%env(for_build:BUGSNAG_API_KEY)%'",
-                        "",
-                        "    app_name:",
-                        "        enabled: true",
-                        "        env_var: 'AWS_ECS_TASK_NAME'",
-                        "",
-                        "    aws_ecs_fargate:",
-                        "        enabled: true",
-                        "",
-                        "    session_tracking:",
-                        "        enabled: true",
-                        "        exclude_urls:",
-                        "            - '^/ping'",
-                        "        messenger_message_count_for_sessions: true",
-                        "",
-                        "    worker_info:",
-                        "        enabled: true",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/dev/easy_bugsnag.yaml": {
+                "config/packages/test/easy_bugsnag.yaml": {
                     "contents": [
                         "easy_bugsnag:",
                         "    aws_ecs_fargate:",
@@ -60,7 +36,7 @@
                     ],
                     "executable": false
                 },
-                "config/packages/test/easy_bugsnag.yaml": {
+                "config/packages/dev/easy_bugsnag.yaml": {
                     "contents": [
                         "easy_bugsnag:",
                         "    aws_ecs_fargate:",
@@ -68,6 +44,30 @@
                         "",
                         "    session_tracking:",
                         "        enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/easy_bugsnag.yaml": {
+                    "contents": [
+                        "easy_bugsnag:",
+                        "    api_key: '%env(for_build:BUGSNAG_API_KEY)%'",
+                        "",
+                        "    app_name:",
+                        "        enabled: true",
+                        "        env_var: 'AWS_ECS_TASK_NAME'",
+                        "",
+                        "    aws_ecs_fargate:",
+                        "        enabled: true",
+                        "",
+                        "    session_tracking:",
+                        "        enabled: true",
+                        "        exclude_urls:",
+                        "            - '^/ping'",
+                        "        messenger_message_count_for_sessions: true",
+                        "",
+                        "    worker_info:",
+                        "        enabled: true",
                         ""
                     ],
                     "executable": false

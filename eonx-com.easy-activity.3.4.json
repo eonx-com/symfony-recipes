@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "eonx-com/easy-activity": {
+            "manifest": {
+                "bundles": {
+                    "EonX\\EasyDoctrine\\Bridge\\Symfony\\EasyDoctrineSymfonyBundle": [
+                        "all"
+                    ],
+                    "EonX\\EasyActivity\\Bridge\\Symfony\\EasyActivitySymfonyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/easy_activity.yaml": {
+                    "contents": [
+                        "easy_activity:",
+                        "    disallowed_properties:",
+                        "        - updatedAt",
+                        "        - createdAt",
+                        "",
+                        "    subjects:",
+                        "#        App\\Entity\\SomeEntity:",
+                        "#            allowed_properties:",
+                        "#                - content",
+                        "#                - description",
+                        "#            disallowed_properties:",
+                        "#                - author",
+                        "#            type: SomeEntity",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "98bd44ce8d4bb5e5d7d682c2c62cd9e6c6850cf7"
+        }
+    }
+}
