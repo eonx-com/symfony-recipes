@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "eonx-com/easy-doctrine": {
+            "manifest": {
+                "bundles": {
+                    "EonX\\EasyDoctrine\\Bridge\\Symfony\\EasyDoctrineSymfonyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/easy_doctrine.yaml": {
+                    "contents": [
+                        "easy_doctrine:",
+                        "    deferred_dispatcher_entities: []",
+                        "",
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: false",
+                        "",
+                        "    EonX\\EasyDoctrine\\ORM\\Decorators\\EntityManagerDecorator:",
+                        "        arguments:",
+                        "            $wrapped: '@.inner'",
+                        "        decorates: doctrine.orm.default_entity_manager",
+                        "",
+                        "    EonX\\EasyDoctrine\\Subscribers\\EntityEventSubscriber:",
+                        "        arguments:",
+                        "            $entities: '%easy_doctrine.deferred_dispatcher_entities%'",
+                        "        tags:",
+                        "            -",
+                        "                name: doctrine.event_subscriber",
+                        "                connection: default",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8af1c0f6664d3d824a1d7416141874bf627b3173"
+        }
+    }
+}

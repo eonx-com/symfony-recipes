@@ -12,30 +12,6 @@
                 }
             },
             "files": {
-                "config/packages/test/easy_bugsnag.yaml": {
-                    "contents": [
-                        "easy_bugsnag:",
-                        "    aws_ecs_fargate:",
-                        "        enabled: false",
-                        "",
-                        "    session_tracking:",
-                        "        enabled: false",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/local/easy_bugsnag.yaml": {
-                    "contents": [
-                        "easy_bugsnag:",
-                        "    aws_ecs_fargate:",
-                        "        enabled: false",
-                        "",
-                        "    session_tracking:",
-                        "        enabled: false",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/dev/easy_bugsnag.yaml": {
                     "contents": [
                         "easy_bugsnag:",
@@ -68,6 +44,30 @@
                         "",
                         "    worker_info:",
                         "        enabled: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/local/easy_bugsnag.yaml": {
+                    "contents": [
+                        "easy_bugsnag:",
+                        "    aws_ecs_fargate:",
+                        "        enabled: false",
+                        "",
+                        "    session_tracking:",
+                        "        enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/easy_bugsnag.yaml": {
+                    "contents": [
+                        "easy_bugsnag:",
+                        "    aws_ecs_fargate:",
+                        "        enabled: false",
+                        "",
+                        "    session_tracking:",
+                        "        enabled: false",
                         ""
                     ],
                     "executable": false
